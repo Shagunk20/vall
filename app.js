@@ -40,7 +40,8 @@ const chatRoutes = require("./routes/chat.js");
 const fetchNotifications = require('./middleware/fetchNotifications');
 app.use(fetchNotifications);
 
-const PORT = 4000;
+const PORT = process.env.PORT;
+
 
 
 app.set("views", path.join(__dirname, "views"));
