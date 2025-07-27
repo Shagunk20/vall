@@ -65,7 +65,7 @@ mongoose.connect(dbUrl)
   const store = MongoStore.create({
   mongoUrl : dbUrl,
   crypto:{
-    secret: process.env.SECRET || "thisisnotagoodsecret",
+    secret: "thisisnotagoodsecret",
 
 
   },
@@ -77,7 +77,7 @@ store.on("error",()=>{
 });
   const sessionOptions = {
      store,
-    secret: process.env.SECRET || "thisisnotagoodsecret",
+    secret: "thisisnotagoodsecret",
     resave: false,
     saveUninitialized: true,
     cookie: {
